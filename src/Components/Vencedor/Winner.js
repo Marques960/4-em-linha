@@ -1,6 +1,6 @@
 const Winner = ({winner, jogarNovamente, nomesJogadores, reporJogo}) => {
     return <div className="winner-popup">
-        <p> 
+        <div> 
             {winner === -1
             ? <span>Nobody Won</span>
             : <span>O jogador {winner === 1 ? nomesJogadores.player1 : nomesJogadores.player2} venceu</span>
@@ -9,7 +9,7 @@ const Winner = ({winner, jogarNovamente, nomesJogadores, reporJogo}) => {
                 <button onClick={jogarNovamente}>Jogar Novamente</button>
                 <button onClick={reporJogo}>Reiniciar Jogo</button>
             </div>
-        </p>
+        </div>
     </div>
     
 }

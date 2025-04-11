@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './App.css';
-import Board from  './Components/Board'
-import DropZone from './Components/DropZone'
-import Winner from './Components/Winner'
-import StartMenu from './Components/startMenu-component';
+import Board from  './Components/Tabela/Board'
+import DropZone from './Components/DropZone/DropZone'
+import Winner from './Components/Vencedor/Winner'
+import StartMenu from './Components/startMenu/startMenu-component';
 
 function App() {
 

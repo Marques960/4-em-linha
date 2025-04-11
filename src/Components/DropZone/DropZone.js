@@ -1,8 +1,8 @@
-import { cols, rows, size } from '../constants/constants';
-import ActiveCoin from './ActiveCoin';
+import { cols, rows, size } from '../../constants/constants';
+import ActiveCoin from './../ActiveCoin';
 import './DropZone.css';
 import {use, useEffect, useState} from 'react' 
-import Winner from './Winner'
+import Winner from './../Vencedor/Winner'
 
 const DropZone = ({ nomesJogadores,setNomesJogadores, setStarted}) => {
     const [turn, setTurn] = useState(2)

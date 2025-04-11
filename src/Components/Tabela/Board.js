@@ -1,5 +1,5 @@
 import './Board.css';
-import {rows, cols} from '../constants/constants'
+import {rows, cols} from '../../constants/constants'
 
 const Board = () => {
     const board = 
