@@ -4,7 +4,7 @@ import './DropZone.css';
 import {use, useEffect, useState} from 'react' 
 import Winner from './Winner'
 
-const DropZone = () => {
+const DropZone = ({ nomesJogadores,setNomesJogadores, setStarted}) => {
     const [turn, setTurn] = useState(2)
     const [winner, setWinner] = useState(0); //bool - 0 ninguem venceu
     const [dropped, setDropped] = useState([]);
@@ -60,10 +60,18 @@ const DropZone = () => {
         })
     }
 
-    const reset = () => {
+    const JogarNovamente = () => {
         setTurn(1)
         setDropped([])
         setWinner(0)
+    }
+
+    const ReporJogo = () => {
+        setTurn(1)
+        setDropped([])
+        setWinner(0)
+        setNomesJogadores({player1: '', player2: ''})
+        setStarted(false)
     }
 
     useEffect(() => {
@@ -88,7 +96,12 @@ const DropZone = () => {
 
         {
             winner
-            ?  <Winner winner = {winner} reset={reset}/>
+            ?  <Winner 
+                    winner = {winner} 
+                    JogarNovamente={JogarNovamente}  
+                    nomesJogadores={nomesJogadores} 
+                    reporJogo={ReporJogo}
+                />
             : <ActiveCoin
                 turn = {turn}
                 dropped =  {dropped}
